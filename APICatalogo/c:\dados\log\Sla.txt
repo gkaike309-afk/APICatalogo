@@ -1,0 +1,5 @@
+Information: 14 - Now listening on: http://localhost:5072
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: /home/kaike/Documentos/APICatalogo/08.09/APICatalogo
+Information: 0 - Application is shutting down...
