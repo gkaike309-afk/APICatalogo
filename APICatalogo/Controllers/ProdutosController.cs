@@ -131,7 +131,7 @@ public class ProdutosController : ControllerBase
         if (!ModelState.IsValid || !TryValidateModel(produtoUpdateRequest))
             return BadRequest(ModelState);
         
-        _mapper.Map(produtoUpdateRequest, produto);
+        await _mapper.Map(produtoUpdateRequest, produto);
         
         _uof.ProdutoRepository?.Update(await produto);
         await _uof.CommitAsync();

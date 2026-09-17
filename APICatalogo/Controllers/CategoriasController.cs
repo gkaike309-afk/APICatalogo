@@ -3,10 +3,11 @@ using APICatalogo.DTOs;
 using APICatalogo.DTOs.Mappings;
 using APICatalogo.Models;
 using APICatalogo.Repositores;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using PagedList;
+using X.PagedList;
 
 namespace APICatalogo.Controllers;
 
@@ -24,6 +25,18 @@ public class CategoriasController : ControllerBase
         _uof = uof;
     }
 
+    [HttpGet]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
+    {
+        var categorias = await _uof.CategoriaRepository.GetAllAsync();
+        if (categorias is null)
+            return NotFound("Não exsitem categorias...");
+
+        var categoriasDto = categorias.ToCategoriaDTOList();
+        return Ok(categorias);
+    }
+    
     [HttpGet("pagination")]
     public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get([FromQuery] CategoriasParameters categoriasParameters)
     {
@@ -57,17 +70,6 @@ public class CategoriasController : ControllerBase
 
         var categoriasDto = categorias.ToCategoriaDTOList();
         return  Ok(categoriasDto);
-    }
-    
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
-    {
-        var categorias = await _uof.CategoriaRepository.GetAllAsync();
-        if (categorias is null)
-            return NotFound("Não exsitem categorias...");
-
-        var categoriasDto = categorias.ToCategoriaDTOList();
-        return Ok(categorias);
     }
 
     [HttpGet("{id:int}", Name = "ObterCategoria")]

@@ -1,6 +1,6 @@
 using APICatalogo.Controllers;
 using APICatalogo.Models;
-using PagedList;
+using X.PagedList;
 
 namespace APICatalogo.Repositores;
 

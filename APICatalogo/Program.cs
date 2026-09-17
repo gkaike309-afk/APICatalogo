@@ -6,6 +6,7 @@ using APICatalogo.DTOs.Mappings;
 using APICatalogo.Logging;
 using APICatalogo.Repositores;
 using AutoMapper;
+using APICatalogo.DTOs.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,9 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAuthentication();
+builder.Services.AddAuthentication("Bearer").AddJwtBearer();
+
 string? npsqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -48,7 +52,9 @@ builder.Logging.AddProvider(new CustomLoggerProvider( new CustomLoggerProviderCo
     LogLevel = LogLevel.Information,
 }));
 
-builder.Services.AddAutoMapper(typeof(ProdutoDTOMappingProfile));
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
+
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 

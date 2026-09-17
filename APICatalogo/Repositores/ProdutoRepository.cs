@@ -1,6 +1,7 @@
 using APICatalogo.Context;
 using APICatalogo.Controllers;
 using APICatalogo.Models;
+using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 using X.PagedList.EF;
 
@@ -13,18 +14,22 @@ public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     
     public async Task<IPagedList<Produto>> GetProdutosAsync(ProdutosParameters produtosParams)
     {
-        var produtos = await GetAllAsync();
-        
-        var produtosOrdenados = produtos.OrderBy(p => p.ProdutoId).AsQueryable();
-        
-        var resultado = await produtosOrdenados.ToPagedListAsync(produtosParams.PageNumber, produtosParams.PageSize);
-        
+        var produtosOrdenados = _context.Produtos
+            .AsNoTracking()
+            .OrderBy(p => p.ProdutoId);
+
+        var resultado = await produtosOrdenados.ToPagedListAsync(
+            produtosParams.PageNumber,
+            produtosParams.PageSize);
+
         return resultado;
     }
 
     public async Task<IPagedList<Produto>> GetProdutosFiltroPrecoAsync(ProdutosFiltroPreco produtosFiltroParams)
     {
-        var produtos = (await GetAllAsync()).AsQueryable();
+        var produtos = _context.Produtos
+            .AsNoTracking()
+            .AsQueryable();
 
         if (produtosFiltroParams.Preco.HasValue && !string.IsNullOrEmpty(produtosFiltroParams.PrecoCriterio))
         {
