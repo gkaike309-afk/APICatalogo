@@ -107,6 +107,21 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    
+    options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("Admin").
+        RequireRole("id", "kaike"));
+    
+    options.AddPolicy("ExclusivePolicyOnly", policy =>
+                             policy.RequireAssertion(context => 
+                                 context.User.HasClaim(claim => 
+                                     claim.Type == "id" && 
+                                     claim.Value == "kaike")
+                                 || context.User.IsInRole("SuperAdmin")));
+});
+
 builder.Logging.AddProvider(new CustomLoggerProvider( new CustomLoggerProviderConfiguration
 {
     LogLevel = LogLevel.Information,

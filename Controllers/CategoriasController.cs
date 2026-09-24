@@ -67,7 +67,7 @@ public class CategoriasController : ControllerBase
             return NotFound("Não exsitem categorias...");
 
         var categoriasDto = categorias.ToCategoriaDTOList();
-        return Ok(categorias);
+        return Ok(categoriasDto);
     }
 
     [HttpGet("{id:int}", Name = "ObterCategoria")]
@@ -125,6 +125,7 @@ public class CategoriasController : ControllerBase
     }
     
     [HttpDelete("{id:int}")]
+    [Authorize(Policy = "AdminOnly")]
     public async Task<ActionResult<CategoriaDTO>> Delete(int id)
     {
         var categoria = await _uof.CategoriaRepository.GetAsync(c => c.CategoriaId == id);

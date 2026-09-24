@@ -1,3 +1,4 @@
+using System.Collections;
 using APICatalogo.Context;
 using APICatalogo.DTOs;
 using APICatalogo.Models;
@@ -73,18 +74,18 @@ public class ProdutosController : ControllerBase
     }
     
     [Authorize]
+    [Authorize(Policy = "UserOnly")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ProdutoDTO>>> Get()
     {
-        var produtos = _uof.ProdutoRepository?.GetAllAsync();
+        var produtos = await _uof.ProdutoRepository.GetAllAsync();
         if (produtos is null)
             return NotFound();
 
-        var produtoDto = _mapper.Map<List<ProdutoDTO>>(produtos);
-
-        return Ok(produtoDto);
+        var produtosDto = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
+        return Ok(produtosDto);
     }
-
+    
     [HttpGet("{id}", Name = "ObterProduto")]
     public async Task<ActionResult<ProdutoDTO>> Get(int id)
     {

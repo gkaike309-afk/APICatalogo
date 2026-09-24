@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj": {}
+    "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj": {}
   },
   "projects": {
-    "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj": {
+    "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+        "projectUniqueName": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
         "projectName": "APICatalogo",
-        "projectPath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+        "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
         "packagesPath": "/home/kaike/.nuget/packages/",
-        "outputPath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/obj/",
+        "outputPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kaike/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6sueCaOnPi0=",
+  "dgSpecHash": "COl8RZwJ5es=",
   "success": true,
-  "projectFilePath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+  "projectFilePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
   "expectedPackageFiles": [
     "/home/kaike/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
@@ -166,9 +166,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "warningLevel": 1,
-      "filePath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net9.0"
@@ -178,9 +178,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
-      "projectPath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "warningLevel": 1,
-      "filePath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "libraryId": "PagedList",
       "targetGraphs": [
         "net9.0"
@@ -190,9 +190,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
-      "projectPath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "warningLevel": 1,
-      "filePath": "/home/kaike/RiderProjects/APICatalogo/21.09/APICatalogo/APICatalogo.csproj",
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
       "libraryId": "PagedList.Mvc",
       "targetGraphs": [
         "net9.0"
