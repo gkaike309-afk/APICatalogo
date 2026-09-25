@@ -3,15 +3,16 @@ using APICatalogo.DTOs.Mappings;
 using APICatalogo.Models;
 using APICatalogo.Repositores;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Newtonsoft.Json;
 using X.PagedList;
 
 namespace APICatalogo.Controllers;
-[EnableCors("OrigensComAcessoPermitido")]
 [Route("[controller]")]
 [ApiController]
+[EnableRateLimiting("fixedwindow")]
+[ApiExplorerSettings(IgnoreApi = true)]
 public class CategoriasController : ControllerBase
 {
     private readonly IUnitOfWork _uof;
@@ -60,6 +61,7 @@ public class CategoriasController : ControllerBase
     }
     
     //[Authorize]
+    [DisableRateLimiting]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
     {
@@ -71,7 +73,6 @@ public class CategoriasController : ControllerBase
         return Ok(categoriasDto);
     }
 
-    [DisableCors]
     [HttpGet("{id:int}", Name = "ObterCategoria")]
     public async Task<ActionResult<CategoriaDTO>> Get(int id)
     {

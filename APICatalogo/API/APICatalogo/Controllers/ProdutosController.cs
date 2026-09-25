@@ -15,6 +15,7 @@ namespace APICatalogo.Controllers;
 
 [Route("[controller]")]
 [ApiController]
+[ApiExplorerSettings(IgnoreApi = true)]
 public class ProdutosController : ControllerBase
 {
     private readonly IUnitOfWork _uof;
@@ -139,6 +140,7 @@ public class ProdutosController : ControllerBase
         
         return Ok(_mapper.Map<ProdutoDTOUpdateResponse>(produto));
     }
+    
     [HttpPut("{id:int}")]
     public async Task<ActionResult<ProdutoDTO>> Put(int id, ProdutoDTO produtoDto)
     {
