@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,4 +15,11 @@ public class TesteV1Controller : ControllerBase
     {
         return "TsteV1 -- GET -- Api versão 1.0";
     }
+=======
+namespace APICatalogo.Controllers;
+
+public class TesteV1Controller
+{
+    
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 }

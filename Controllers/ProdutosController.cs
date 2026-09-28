@@ -15,8 +15,11 @@ namespace APICatalogo.Controllers;
 
 [Route("[controller]")]
 [ApiController]
+<<<<<<< HEAD
 [ApiConventionType(typeof(DefaultApiConventions))]
 //[ApiExplorerSettings(IgnoreApi = true)]
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 public class ProdutosController : ControllerBase
 {
     private readonly IUnitOfWork _uof;
@@ -75,12 +78,17 @@ public class ProdutosController : ControllerBase
         return  Ok(produtosDto);
     }
     
+<<<<<<< HEAD
     /// <summary>
     /// Exibe uma relação dos produtos
     /// </summary>
     /// <returns>retorna uma lista de objetos Produtos</returns>
     
     //[Authorize(Policy ="UserOnly")]
+=======
+    [Authorize]
+    [Authorize(Policy = "UserOnly")]
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ProdutoDTO>>> Get()
     {
@@ -92,6 +100,7 @@ public class ProdutosController : ControllerBase
         return Ok(produtosDto);
     }
     
+<<<<<<< HEAD
     /// <summary>
     /// Obtem o produto pelo seu identificado produtoId
     /// </summary>
@@ -106,6 +115,11 @@ public class ProdutosController : ControllerBase
             return BadRequest("Id de produto inválido");
         }
         
+=======
+    [HttpGet("{id}", Name = "ObterProduto")]
+    public async Task<ActionResult<ProdutoDTO>> Get(int id)
+    {
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
         var produto = _uof.ProdutoRepository?.GetAsync(c => c.ProdutoId == id);
         if (produto is null)
         {
@@ -116,8 +130,11 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpPost]
+<<<<<<< HEAD
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     public async Task<ActionResult<ProdutoDTO>> Post(ProdutoDTO? produtoDto)
     {
         if (produtoDto is null)
@@ -160,10 +177,14 @@ public class ProdutosController : ControllerBase
         
         return Ok(_mapper.Map<ProdutoDTOUpdateResponse>(produto));
     }
+<<<<<<< HEAD
     
     [HttpPut("{id:int}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+=======
+    [HttpPut("{id:int}")]
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     public async Task<ActionResult<ProdutoDTO>> Put(int id, ProdutoDTO produtoDto)
     {
         if (id != produtoDto.ProdutoId)
@@ -179,10 +200,14 @@ public class ProdutosController : ControllerBase
         return Ok(produtoAtualizadoDto);
     }
 
+<<<<<<< HEAD
     [Authorize(Policy = "Admin")]
     [HttpDelete("{id:int}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+=======
+    [HttpDelete("{id:int}")]
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     public async Task<ActionResult<ProdutoDTO>> Delete(int id)
     {
         var produto = await _uof.ProdutoRepository.GetAsync(p => p.ProdutoId == id);

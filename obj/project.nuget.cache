@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "5lSKj2O7KOY=",
   "success": true,
   "projectFilePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
@@ -10,6 +11,13 @@
     "/home/kaike/.nuget/packages/asp.versioning.mvc.apiexplorer/8.1.1/asp.versioning.mvc.apiexplorer.8.1.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/fluentassertions/8.11.0/fluentassertions.8.11.0.nupkg.sha512",
+=======
+  "dgSpecHash": "COl8RZwJ5es=",
+  "success": true,
+  "projectFilePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+  "expectedPackageFiles": [
+    "/home/kaike/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     "/home/kaike/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",
@@ -83,7 +91,10 @@
     "/home/kaike/.nuget/packages/microsoft.codeanalysis.scripting.common/4.8.0/microsoft.codeanalysis.scripting.common.4.8.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.8.0/microsoft.codeanalysis.workspaces.common.4.8.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/4.8.0/microsoft.codeanalysis.workspaces.msbuild.4.8.0.nupkg.sha512",
+<<<<<<< HEAD
     "/home/kaike/.nuget/packages/microsoft.codecoverage/18.10.1/microsoft.codecoverage.18.10.1.nupkg.sha512",
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     "/home/kaike/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.diasymreader/2.0.0/microsoft.diasymreader.2.0.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.dotnet.scaffolding.shared/9.0.0/microsoft.dotnet.scaffolding.shared.9.0.0.nupkg.sha512",
@@ -92,7 +103,11 @@
     "/home/kaike/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.14/microsoft.entityframeworkcore.analyzers.9.0.14.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.entityframeworkcore.design/9.0.14/microsoft.entityframeworkcore.design.9.0.14.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.14/microsoft.entityframeworkcore.relational.9.0.14.nupkg.sha512",
+<<<<<<< HEAD
     "/home/kaike/.nuget/packages/microsoft.extensions.apidescription.server/9.0.0/microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+=======
+    "/home/kaike/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     "/home/kaike/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.14/microsoft.extensions.caching.abstractions.9.0.14.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.extensions.caching.memory/9.0.14/microsoft.extensions.caching.memory.9.0.14.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.14/microsoft.extensions.configuration.abstractions.9.0.14.nupkg.sha512",
@@ -112,10 +127,14 @@
     "/home/kaike/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.identitymodel.tokens/8.0.1/microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.net.stringtools/17.10.4/microsoft.net.stringtools.17.10.4.nupkg.sha512",
+<<<<<<< HEAD
     "/home/kaike/.nuget/packages/microsoft.net.test.sdk/18.10.1/microsoft.net.test.sdk.18.10.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.openapi/1.6.25/microsoft.openapi.1.6.25.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.testplatform.objectmodel/18.10.1/microsoft.testplatform.objectmodel.18.10.1.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.testplatform.testhost/18.10.1/microsoft.testplatform.testhost.18.10.1.nupkg.sha512",
+=======
+    "/home/kaike/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     "/home/kaike/.nuget/packages/microsoft.visualstudio.web.codegeneration/9.0.0/microsoft.visualstudio.web.codegeneration.9.0.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.visualstudio.web.codegeneration.core/9.0.0/microsoft.visualstudio.web.codegeneration.core.9.0.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/microsoft.visualstudio.web.codegeneration.design/9.0.0/microsoft.visualstudio.web.codegeneration.design.9.0.0.nupkg.sha512",
@@ -139,10 +158,17 @@
     "/home/kaike/.nuget/packages/nuget.versioning/6.11.0/nuget.versioning.6.11.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/pagedlist/1.17.0/pagedlist.1.17.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/pagedlist.mvc/4.5.0/pagedlist.mvc.4.5.0.nupkg.sha512",
+<<<<<<< HEAD
     "/home/kaike/.nuget/packages/swashbuckle.aspnetcore/9.0.6/swashbuckle.aspnetcore.9.0.6.nupkg.sha512",
     "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swagger/9.0.6/swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swaggergen/9.0.6/swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
     "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swaggerui/9.0.6/swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512",
+=======
+    "/home/kaike/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/home/kaike/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     "/home/kaike/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/system.collections.immutable/8.0.0/system.collections.immutable.8.0.0.nupkg.sha512",
     "/home/kaike/.nuget/packages/system.composition/7.0.0/system.composition.7.0.0.nupkg.sha512",
@@ -174,8 +200,15 @@
     {
       "code": "NU1903",
       "level": "Warning",
+<<<<<<< HEAD
       "warningLevel": 1,
       "message": "Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+=======
+      "message": "Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net9.0"
@@ -184,8 +217,15 @@
     {
       "code": "NU1701",
       "level": "Warning",
+<<<<<<< HEAD
       "warningLevel": 1,
       "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+=======
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
       "libraryId": "PagedList",
       "targetGraphs": [
         "net9.0"
@@ -194,8 +234,15 @@
     {
       "code": "NU1701",
       "level": "Warning",
+<<<<<<< HEAD
       "warningLevel": 1,
       "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+=======
+      "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "projectPath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kaike/RiderProjects/APICatalogo/API/APICatalogo/APICatalogo.csproj",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
       "libraryId": "PagedList.Mvc",
       "targetGraphs": [
         "net9.0"

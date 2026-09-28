@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APICatalogo.Controllers;
 
+<<<<<<< HEAD
 /// <summary>
 /// 
 /// </summary>
@@ -16,6 +17,10 @@ namespace APICatalogo.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 //[ApiExplorerSettings(IgnoreApi = true)]
+=======
+[Route("api/[controller]")]
+[ApiController]
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 public class AuthController : ControllerBase
 {
     private readonly ITokenService _tokenService;
@@ -24,7 +29,10 @@ public class AuthController : ControllerBase
     private readonly IConfiguration _configuration;
     private readonly ILogger<AuthController> _logger;
 
+<<<<<<< HEAD
     /// <inheritdoc />
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     public AuthController(ITokenService tokenService,
         UserManager<ApplicationUser> userManager,
         RoleManager<IdentityRole> roleManager,
@@ -64,7 +72,11 @@ public class AuthController : ControllerBase
         return StatusCode(StatusCodes.Status400BadRequest,
             new Response { Status = "Error", Message = "Role already exist" });
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     [HttpPost]
     [Authorize(Policy = "SuperAdminOnly")]
     [Route("AddUserToRole")]
@@ -89,6 +101,7 @@ public class AuthController : ControllerBase
         return BadRequest(new { error = "Unable to find user" });
     }
     
+<<<<<<< HEAD
     /// <summary>
     /// Verifica as credenciais de um Usuário
     /// </summary>
@@ -96,6 +109,8 @@ public class AuthController : ControllerBase
     /// <returns>Status 200 e o token para o cliente</returns>
     /// <remarks>Retorna o Status 200 e o token</remarks>
     
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     [HttpPost]
     [Route("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel model)
@@ -143,6 +158,7 @@ public class AuthController : ControllerBase
         return Unauthorized();
     }
     
+<<<<<<< HEAD
     /// <summary>
     /// Registra um novo usuário
     /// </summary>
@@ -150,6 +166,8 @@ public class AuthController : ControllerBase
     /// <returns>Status 200</returns>
     /// <remarks>Retorna o Status 200</remarks>
     
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> Register([FromBody] RegisterModel model)
@@ -195,6 +213,7 @@ public class AuthController : ControllerBase
             return BadRequest("Invalid client request");
         }
 
+<<<<<<< HEAD
         string accessToken = tokenModel.AccessToken
                               ?? throw new ArgumentNullException(nameof(tokenModel));
 
@@ -202,6 +221,15 @@ public class AuthController : ControllerBase
                                ?? throw new ArgumentException(nameof(tokenModel));
 
         var principal = _tokenService?.GetPrincipalFromExpiredToken(accessToken, _configuration);
+=======
+        string? accessToken = tokenModel.AccessToken
+                              ?? throw new ArgumentNullException(nameof(tokenModel));
+
+        string? refreshToken = tokenModel.RefreshToken
+                               ?? throw new ArgumentException(nameof(tokenModel));
+
+        var principal = _tokenService?.GetPrincipalFromExpiredToken(accessToken!, _configuration);
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 
         if (principal == null)
         {

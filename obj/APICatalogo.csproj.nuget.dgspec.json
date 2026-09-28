@@ -25,6 +25,10 @@
         },
         "frameworks": {
           "net9.0": {
+<<<<<<< HEAD
+=======
+            "framework": "net9.0",
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
             "targetAlias": "net9.0",
             "projectReferences": {}
           }
@@ -43,6 +47,7 @@
       },
       "frameworks": {
         "net9.0": {
+<<<<<<< HEAD
           "targetAlias": "net9.0",
           "dependencies": {
             "Asp.Versioning.Http": {
@@ -53,14 +58,22 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+=======
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
             },
+<<<<<<< HEAD
             "FluentAssertions": {
               "target": "Package",
               "version": "[8.11.0, )"
             },
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.17, )"
@@ -87,10 +100,13 @@
               "target": "Package",
               "version": "[9.0.14, )"
             },
+<<<<<<< HEAD
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[18.10.1, )"
             },
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -109,7 +125,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[9.0.6, )"
+=======
+              "version": "[6.5.0, )"
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
             },
             "X.PagedList": {
               "target": "Package",

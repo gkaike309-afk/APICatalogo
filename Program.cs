@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.RateLimiting;
+=======
+using System.Text;
+using System.Text.Json.Serialization;
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 using APICatalogo.Context;
 using APICatalogo.DTOs.Mappings;
 using APICatalogo.Filters;
 using APICatalogo.Logging;
 using APICatalogo.Models;
+<<<<<<< HEAD
 using APICatalogo.RateLimitOptions;
 using APICatalogo.Repositores;
 using APICatalogo.Services;
@@ -14,6 +20,12 @@ using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
+=======
+using APICatalogo.Repositores;
+using APICatalogo.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -39,6 +51,7 @@ builder.Services.AddControllers(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });
 
+<<<<<<< HEAD
 var OrigensComAcessoPermitido = "_origensComAcessoPermitido";
 
 builder.Services.AddCors(options =>
@@ -79,6 +92,13 @@ builder.Services.AddSwaggerGen(c =>
     var xmlFileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFileName));
     
+=======
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "apicatalogo", Version = "v1" });
+
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
@@ -116,6 +136,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<ApiLoggingFilter>();
 
+<<<<<<< HEAD
 builder.Services.AddApiVersioning(o =>
 {
     o.DefaultApiVersion = new ApiVersion(1, 0);
@@ -130,6 +151,8 @@ builder.Services.AddApiVersioning(o =>
     options.SubstituteApiVersionInUrl = true;
 });
 
+=======
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 builder.Services.AddScoped<ICategoriaRepository,CategoriaRepository>();
 builder.Services.AddScoped<IProdutoRepository,ProdutoRepository>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -166,14 +189,19 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
     
     options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("Admin").
+<<<<<<< HEAD
         RequireRole("id", "master"));
 
     options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+=======
+        RequireRole("id", "kaike"));
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
     
     options.AddPolicy("ExclusivePolicyOnly", policy =>
                              policy.RequireAssertion(context => 
                                  context.User.HasClaim(claim => 
                                      claim.Type == "id" && 
+<<<<<<< HEAD
                                      claim.Value == "master")
                                  || context.User.IsInRole("SuperAdmin")));
 });
@@ -209,6 +237,12 @@ builder.Services.AddRateLimiter(options =>
                                   Window = TimeSpan.FromSeconds(10)
                               }));
 });
+=======
+                                     claim.Value == "kaike")
+                                 || context.User.IsInRole("SuperAdmin")));
+});
+
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 builder.Logging.AddProvider(new CustomLoggerProvider( new CustomLoggerProviderConfiguration
 {
     LogLevel = LogLevel.Information,
@@ -222,6 +256,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
+<<<<<<< HEAD
     //app.UseSwaggerUI();
     app.UseSwaggerUI(c =>
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "APICatalogo"));
@@ -235,6 +270,12 @@ app.UseRateLimiter();
 
 app.UseCors();
 
+=======
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

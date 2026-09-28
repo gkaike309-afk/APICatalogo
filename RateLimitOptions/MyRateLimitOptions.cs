@@ -2,6 +2,7 @@ namespace APICatalogo.RateLimitOptions;
 
 public class MyRateLimitOptions
 {
+<<<<<<< HEAD
     public const string MyRateLimit = "MyRateLimit";
 
     public int PermitLimit { get; set; } = 5;
@@ -21,4 +22,7 @@ public class MyRateLimitOptions
     public int TokensPerPeriod { get; set; } = 4;
     
     public bool AutoReplenishment { get; set; } = false;
+=======
+    
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 }

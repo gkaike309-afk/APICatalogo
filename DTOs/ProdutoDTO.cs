@@ -25,4 +25,8 @@ public class ProdutoDTO
     public string? ImagemUrl { get; set; }
     
     public int CategoriaId { get; set; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ebe7d541f79dfcdac52da27cc2b0c32df3d25af4
 }
