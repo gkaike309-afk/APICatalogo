@@ -1,0 +1,16 @@
+# Rider / IntelliJ
+.idea/
+*.DotSettings.user
+
+# Build
+bin/
+obj/
+publish/
+
+# User-specific
+*.user
+*.suo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
