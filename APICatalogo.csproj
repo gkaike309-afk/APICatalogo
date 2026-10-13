@@ -7,6 +7,8 @@
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
         <NoWarn>$(NoWarn);1591</NoWarn>
         <IncludeOpenAPIAnalizers>True</IncludeOpenAPIAnalizers>
+
+        <DefaultItemExcludes>$(DefaultItemExcludes);Catalogo/CategoriasMvc/CategoriasMvc/**</DefaultItemExcludes>
     </PropertyGroup>
 
     <ItemGroup>
@@ -23,6 +25,7 @@
           <PrivateAssets>all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.14" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
         <PackageReference Include="Npgsql" Version="9.0.3" />

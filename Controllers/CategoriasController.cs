@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using X.PagedList;
 
 namespace APICatalogo.Controllers;
-[Route("[controller]")]
+[Route("/api/{v}/[controller]")]
 [ApiController]
 [EnableRateLimiting("fixedwindow")]
 [Produces("application/json")]
